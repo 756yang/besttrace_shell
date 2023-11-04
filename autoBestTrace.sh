@@ -28,4 +28,13 @@ do
 	sudo ./besttrace2021 -q 1 ${ip_list[$i]}
 	next
 done
+
+# start besttrace args...
+for ips in "$@"
+do
+	echo "BestTrace for $ips"
+	sudo ./besttrace2021 -q 1 "$ips"
+	next
+done
+# remove besttrace file
 rm ./besttrace2021
